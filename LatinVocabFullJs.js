@@ -10,10 +10,7 @@ function createHead(){
 
 	createTitle("Nosce Lingua Latina ē wadsworth.tech");
 	createLinks(FAVICON_LINK);
-<<<<<<< HEAD
 	createViewport();
-=======
->>>>>>> f0dd1d9f7a96d0e57dc588b22deb00642ba66c21
 
 	/**
 	* This function creates and appends the page title as a child of <head>
