@@ -10,6 +10,7 @@ function createHead(){
 
 	createTitle("Nosce Lingua Latina ē wadsworth.tech");
 	createLinks(FAVICON_LINK);
+	createViewport();
 
 	/**
 	* This function creates and appends the page title as a child of <head>
@@ -37,6 +38,13 @@ function createHead(){
 		favicon.href = faviconLink;
 		favicon.sizes = "32x32";
 		document.head.appendChild(favicon);
+	}
+
+	function createViewport(){
+		let viewport = document.createElement("meta");
+		viewport.name = "viewport";
+		viewport.content = "width=device-width, initial-scale=1.0";
+		document.head.appendChild(viewport);
 	}
 }
 
