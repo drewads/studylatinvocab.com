@@ -6,19 +6,10 @@ createBody();
 * This function creates the HTML in the <head>
 **/
 function createHead(){
-	//changeToHTTPS();
-	createTitle("Nosce Lingua Latina ē wadsworth.tech");
-	createLinks("/icons/torchAndWreath.png");
+	FAVICON_LINK = "/icons/torchAndWreath.png";
 
-	/**
-	* This function changes the page protocol to https
-	**/
-	function changeToHTTPS(){
-		if (location.protocol != 'https:')
-	    {
-	        location.href = 'https:' + window.location.href.substring(window.location.protocol.length);
-	    }
-	}
+	createTitle("Nosce Lingua Latina ē wadsworth.tech");
+	createLinks(FAVICON_LINK);
 
 	/**
 	* This function creates and appends the page title as a child of <head>
@@ -54,8 +45,17 @@ function createHead(){
 * scripting for this program.
 */
 function createBody(){
+	let windowWidth = window.innerWidth || document.body.clientWidth;
+
 	setBodyStyle();
-	createTop();
+
+	if (windowWidth < 500){
+		setBodyStyleMobile();
+		createTopMobile();
+	}
+	else {
+		createTopDesktop();
+	}
 
 	let listOfLists = getStudyList(null);
 	let currentStudyList = shuffle(listOfLists[listOfLists.length - 1][1]);	//Initial list to be studied
@@ -84,10 +84,14 @@ function createBody(){
 		document.body.style.fontFamily = "'Lato', sans-serif";
 	}
 
+	function setBodyStyleMobile(){
+		document.body.style.textAlign = "center";
+	}
+
 	/**
 	* This function creates the HTML for the "top" div - the intro text at the top of the page
 	**/
-	function createTop(){
+	function createTopDesktop(){
 		//Div element for this group of elements
 		let topDiv = document.createElement("DIV");
 		topDiv.class = "top";
@@ -108,6 +112,43 @@ function createBody(){
 	    let latinDate = document.createElement("p");
 	    latinDate.appendChild(document.createTextNode(getRomanDate()));
 	    latinDate.style.fontSize = "30px";
+	    latinDate.style.marginBottom = "0px";
+	    topDiv.appendChild(latinDate);
+
+	    //Attribute Roman date to Akshay
+	    let akshay = document.createElement("p");
+	    akshay.appendChild(document.createTextNode("Thanks to Akshay for the Roman date"));
+	    akshay.style.fontSize = "10px";
+	    akshay.style.marginTop = "0px";
+	    topDiv.appendChild(akshay);
+
+	    //Style
+	    topDiv.style.textAlign = "center";
+	}
+
+	function createTopMobile(){
+		//Div element for this group of elements
+		let topDiv = document.createElement("DIV");
+		topDiv.class = "top";
+		document.body.appendChild(topDiv);
+		
+		//Very top text
+		let topHeader = document.createElement("h1");
+	    topHeader.appendChild(document.createTextNode("Nosce Verba Latina!"));
+	    topHeader.style.fontSize = "250%";
+	    topDiv.appendChild(topHeader);
+
+	    //Complement element to subHeader - links to wadsworth.tech/main
+	    let linkToMySite = document.createElement("a");
+	    linkToMySite.href = "https://wadsworth.tech";
+	    linkToMySite.appendChild(document.createTextNode("For more information, check out my personal website."));
+	    linkToMySite.style.fontSize = "80%";
+	    topDiv.appendChild(linkToMySite);
+
+	    //Display Roman date
+	    let latinDate = document.createElement("p");
+	    latinDate.appendChild(document.createTextNode(getRomanDate()));
+	    latinDate.style.fontSize = "25px";
 	    latinDate.style.marginBottom = "0px";
 	    topDiv.appendChild(latinDate);
 
