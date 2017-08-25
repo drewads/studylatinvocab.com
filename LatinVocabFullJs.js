@@ -1117,6 +1117,19 @@ function getStudyList(chapterID)
 		["turpis","turpe: ugly, unseemly, shameful, disgraceful, dishonorable"]
 	];
 
+	let metamorphosesbk1Ln351To7 = [
+		["coniunx","coniugis, c: wife, husband, spouse"],
+		["iungō","iūnxī, iūnctum: join"],
+		["lacrima","lacrimae, f: tear"],
+		["nūbilum","nūbilī, n: cloud, mist"],
+		["orbis","orbis, m: physical world"],
+		["orīgo","orīginis, f: birth, origin"],
+		["pontus","pontī, m: sea"],
+		["possideō","possēdī, possessum: to hold, possess"],
+		["quīcumque","quaecumque, quodcumque: whoever, whichever, whatever"],
+		["soror","sororis, f: sister"]
+	];
+
 	let chapters = [
 	    [bk4ch25, "De Bello Gallico Book 4 Chapter 25"],
 	    [bk4ch25SansMacrons, "De Bello Gallico Book 4 Chapter 25: No Macrons"],
@@ -1131,7 +1144,8 @@ function getStudyList(chapterID)
 	    [bk5ch26, "De Bello Gallico Book 5 Chapter 26"],
 	    [bk5ch26SansMacrons, "De Bello Gallico Book 5 Chapter 26: No Macrons"],
 	    [bk5ch28, "De Bello Gallico Book 5 Chapter 28"],
-	    [bk5ch28SansMacrons, "De Bello Gallico Book 5 Chapter 28: No Macrons"]
+	    [bk5ch28SansMacrons, "De Bello Gallico Book 5 Chapter 28: No Macrons"],
+	    [metamorphosesbk1Ln351To7, "Metamorphōsēs Book 1 Lines 351-357"]
 	];
 
 	if (chapterID == null)
