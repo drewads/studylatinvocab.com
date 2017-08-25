@@ -1130,6 +1130,19 @@ function getStudyList(chapterID)
 		["soror","sororis, f: sister"]
 	];
 
+	let metamorphosesbk1Ln351To7sansMacrons = [
+		["coniunx","coniugis, c: wife, husband, spouse"],
+		["iungo","iunxi, iunctum: join"],
+		["lacrima","lacrimae, f: tear"],
+		["nubilum","nubili, n: cloud, mist"],
+		["orbis","orbis, m: physical world"],
+		["origo","originis, f: birth, origin"],
+		["pontus","ponti, m: sea"],
+		["possideo","possedi, possessum: to hold, possess"],
+		["quicumque","quaecumque, quodcumque: whoever, whichever, whatever"],
+		["soror","sororis, f: sister"]
+	];
+
 	let chapters = [
 	    [bk4ch25, "De Bello Gallico Book 4 Chapter 25"],
 	    [bk4ch25SansMacrons, "De Bello Gallico Book 4 Chapter 25: No Macrons"],
@@ -1145,6 +1158,7 @@ function getStudyList(chapterID)
 	    [bk5ch26SansMacrons, "De Bello Gallico Book 5 Chapter 26: No Macrons"],
 	    [bk5ch28, "De Bello Gallico Book 5 Chapter 28"],
 	    [bk5ch28SansMacrons, "De Bello Gallico Book 5 Chapter 28: No Macrons"],
+	    [metamorphosesbk1Ln351To7sansMacrons, "Metamorphōsēs Book 1 Lines 351-357: No Macrons"],
 	    [metamorphosesbk1Ln351To7, "Metamorphōsēs Book 1 Lines 351-357"]
 	];
 
