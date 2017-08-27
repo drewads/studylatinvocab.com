@@ -1119,28 +1119,48 @@ function getStudyList(chapterID)
 
 	let metamorphosesbk1Ln351To7 = [
 		["coniunx","coniugis, c: wife, husband, spouse"],
-		["iungō","iūnxī, iūnctum: join"],
+		["iungō","iungere, iūnxī, iūnctum: join"],
 		["lacrima","lacrimae, f: tear"],
 		["nūbilum","nūbilī, n: cloud, mist"],
 		["orbis","orbis, m: physical world"],
 		["orīgo","orīginis, f: birth, origin"],
 		["pontus","pontī, m: sea"],
-		["possideō","possēdī, possessum: to hold, possess"],
+		["possideō","possidēre, possēdī, possessum: to hold, possess"],
 		["quīcumque","quaecumque, quodcumque: whoever, whichever, whatever"],
 		["soror","sororis, f: sister"]
 	];
 
 	let metamorphosesbk1Ln351To7sansMacrons = [
 		["coniunx","coniugis, c: wife, husband, spouse"],
-		["iungo","iunxi, iunctum: join"],
+		["iungo","iungere, iunxi, iunctum: join"],
 		["lacrima","lacrimae, f: tear"],
 		["nubilum","nubili, n: cloud, mist"],
 		["orbis","orbis, m: physical world"],
 		["origo","originis, f: birth, origin"],
 		["pontus","ponti, m: sea"],
-		["possideo","possedi, possessum: to hold, possess"],
+		["possideo","possidere, possedi, possessum: to hold, possess"],
 		["quicumque","quaecumque, quodcumque: whoever, whichever, whatever"],
 		["soror","sororis, f: sister"]
+	];
+
+	let metamorphosesbk1Ln367To74 = [
+		["anima","animae, f: soul, spirit, breath"],
+		["fātum","fātī, n: fate, destiny"],
+		["fōrmō","fōrmāre, fōrmāvī, fōrmātum: to shape, form, mold"],
+		["mortālis","mortāle: mortal, human"],
+		["paternus","paterna, paternum: father's, paternal"],
+		["superī","superōrum, m: powers above, gods"],
+		["utinam","would that, o that, (+subj)"]
+	];
+
+	let metamorphosesbk1Ln367To74sansMacrons = [
+		["anima","animae, f: soul, spirit, breath"],
+		["fatum","fati, n: fate, destiny"],
+		["formo","formare, formavi, formatum: to shape, form, mold"],
+		["mortalis","mortale: mortal, human"],
+		["paternus","paterna, paternum: father's, paternal"],
+		["superi","superorum, m: powers above, gods"],
+		["utinam","would that, o that, (+subj)"]
 	];
 
 	let chapters = [
@@ -1159,7 +1179,9 @@ function getStudyList(chapterID)
 	    [bk5ch28, "De Bello Gallico Book 5 Chapter 28"],
 	    [bk5ch28SansMacrons, "De Bello Gallico Book 5 Chapter 28: No Macrons"],
 	    [metamorphosesbk1Ln351To7sansMacrons, "Metamorphōsēs Book 1 Lines 351-357: No Macrons"],
-	    [metamorphosesbk1Ln351To7, "Metamorphōsēs Book 1 Lines 351-357"]
+	    [metamorphosesbk1Ln351To7, "Metamorphōsēs Book 1 Lines 351-357"],
+	    [metamorphosesbk1Ln367To74sansMacrons, "Metamorphōsēs Book 1 Lines 367-374: No Macrons"],
+	    [metamorphosesbk1Ln367To74, "Metamorphōsēs Book 1 Lines 367-374"]
 	];
 
 	if (chapterID == null)
