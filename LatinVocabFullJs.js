@@ -1,4 +1,4 @@
-//v0.8.0a Stuff to add: restudy the last list, search by contents
+//v0.8.0a Stuff to add: restudy the last list, search by contents, change info popup on mobile to emulate chapters popup
 createHead();
 createBody();
 
@@ -1150,7 +1150,19 @@ function getStudyList(chapterID)
 		["mortālis","mortāle: mortal, human"],
 		["paternus","paterna, paternum: father's, paternal"],
 		["superī","superōrum, m: powers above, gods"],
-		["utinam","would that, o that, (+subj)"]
+		["utinam","would that, o that, (+subj)"],
+		["dea","deae, f: goddess"],
+		["flectō","flectere, flexī, flexum: to bend, curve, avert, steer"],
+		["fleō","flēre, flēuī, flētum: to weep"],
+		["inde","from there"],
+		["nōtus","nōta, nōtum: familiar, well known, usual"],
+		["nūmen","nūminis, n: power, divinity"],
+		["precor","precārī, precātus sum: to pray to, entreat"],
+		["sānctus","sāncta, sānctum: sacrosanct, sacred, holy, blessed, upright, pure"],
+		["sors","sortis, f: oracle, lot"],
+		["vestīgium","vestīgī, n: footstep, footprint, track, walk, trace"],
+		["vestis","vestis, f: clothes, dress, cloth"],
+		["unda","undae, f: wave, water"]
 	];
 
 	let metamorphosesbk1Ln367To74sansMacrons = [
@@ -1160,7 +1172,83 @@ function getStudyList(chapterID)
 		["mortalis","mortale: mortal, human"],
 		["paternus","paterna, paternum: father's, paternal"],
 		["superi","superorum, m: powers above, gods"],
-		["utinam","would that, o that, (+subj)"]
+		["utinam","would that, o that, (+subj)"],
+		["dea","deae, f: goddess"],
+		["flecto","flectere, flexi, flexum: to bend, curve, avert, steer"],
+		["fleo","flere, fleui, fletum: to weep"],
+		["inde","from there"],
+		["notus","nota, notum: familiar, well known, usual"],
+		["numen","numinis, n: power, divinity"],
+		["precor","precari, precatus sum: to pray to, entreat"],
+		["sanctus","sancta, sanctum: sacrosanct, sacred, holy, blessed, upright, pure"],
+		["sors","sortis, f: oracle, lot"],
+		["vestigium","vestigi, n: footstep, footprint, track, walk, trace"],
+		["vestis","vestis, f: clothes, dress, cloth"],
+		["unda","undae, f: wave, water"]
+	];
+
+	let metamorphosesbk1Ln375To97 = [
+		["gelidus","gelida, gelidum: cold"],
+		["humī","on the ground"],
+		["īra","īrae, f: anger, rage, wrath"],
+		["iūstus","iūsta, iūstum: just, righteous, lawful, fair"],
+		["ops","opis, f: help, aid"],
+		["ōsculum","ōsculī, n: kiss"],
+		["paveō","pavēre, pavī: to be frightened, fear"],
+		["precēs","precum, f pl: prayers"],
+		["saxum","saxī, n: stone"],
+		["uterque","utriusque: both, each"],
+		["adeō","to such an extent, so"],
+		["cingō","cingere, cīnxī, cīnctum: to surround, encircle, gird up, be situated, lie round"],
+		["dictum","dictī, n: word, saying"],
+		["iaciō","iacere, iēcī, iactum: throw, hurl, pile up"],
+		["in dubiō","in doubt"],
+		["iussum","iussī, n: injunction, order, command"],
+		["māternus","māterna, māternum: mother's, maternal"],
+		["monita","monitōrum, n pl: advice, warning, precepts"],
+		["nefās","n: wrong, crime, sacrilege, horror"],
+		["ōrāculum","ōrāculī, n: oracle"],
+		["os","ossis, n: bone"],
+		["pavidus","pavida, pavidum: terror struck, fearful"],
+		["pius","pia, pium: holy, dutiful, faithful, just"],
+		["prior","prioris: earlier, former, having prior place, elder"],
+		["repetō","repetere, repetīvī, repetītum: return, go back to, recall, repeat, attack again"],
+		["suādeō","suādēre, suāsī, suāsum: recommend, urge, advocate"],
+		["temptō","temptāre, temptāvī, temptātum: to try out, test, investigate, examine, try"],
+		["tergum","tergī, n: back, rear, far side"],
+		["vēlō","vēlāre, vēlāvī, vēlātum: veil, cover, conceal"]
+	];
+
+	let metamorphosesbk1Ln375To97sansMacrons = [
+		["gelidus","gelida, gelidum: cold"],
+		["humi","on the ground"],
+		["ira","irae, f: anger, rage, wrath"],
+		["iustus","iusta, iustum: just, righteous, lawful, fair"],
+		["ops","opis, f: help, aid"],
+		["osculum","osculi, n: kiss"],
+		["paveo","pavere, pavi: to be frightened, fear"],
+		["preces","precum, f pl: prayers"],
+		["saxum","saxi, n: stone"],
+		["uterque","utriusque: both, each"],
+		["adeo","to such an extent, so"],
+		["cingo","cingere, cinxi, cinctum: to surround, encircle, gird up, be situated, lie round"],
+		["dictum","dicti, n: word, saying"],
+		["iacio","iacere, ieci, iactum: throw, hurl, pile up"],
+		["in dubio","in doubt"],
+		["iussum","iussi, n: injunction, order, command"],
+		["maternus","materna, maternum: mother's, maternal"],
+		["monita","monitorum, n pl: advice, warning, precepts"],
+		["nefas","n: wrong, crime, sacrilege, horror"],
+		["oraculum","oraculi, n: oracle"],
+		["os","ossis, n: bone"],
+		["pavidus","pavida, pavidum: terror struck, fearful"],
+		["pius","pia, pium: holy, dutiful, faithful, just"],
+		["prior","prioris: earlier, former, having prior place, elder"],
+		["repeto","repetere, repetivi, repetitum: return, go back to, recall, repeat, attack again"],
+		["suadeo","suadere, suasi, suasum: recommend, urge, advocate"],
+		["tempto","temptare, temptavi, temptatum: to try out, test, investigate, examine, try"],
+		["tergum","tergi, n: back, rear, far side"],
+		["velo","velare, velavi, velatum: veil, cover, conceal"]
 	];
 
 	let chapters = [
@@ -1181,7 +1269,9 @@ function getStudyList(chapterID)
 	    [metamorphosesbk1Ln351To7sansMacrons, "Metamorphōsēs Book 1 Lines 351-357: No Macrons"],
 	    [metamorphosesbk1Ln351To7, "Metamorphōsēs Book 1 Lines 351-357"],
 	    [metamorphosesbk1Ln367To74sansMacrons, "Metamorphōsēs Book 1 Lines 367-374: No Macrons"],
-	    [metamorphosesbk1Ln367To74, "Metamorphōsēs Book 1 Lines 367-374"]
+	    [metamorphosesbk1Ln367To74, "Metamorphōsēs Book 1 Lines 367-374"],
+	    [metamorphosesbk1Ln375To97sansMacrons, "Metamorphōsēs Book 1 Lines 375-397: No Macrons"],
+	    [metamorphosesbk1Ln375To97, "Metamorphōsēs Book 1 Lines 375-397"]
 	];
 
 	if (chapterID == null)
