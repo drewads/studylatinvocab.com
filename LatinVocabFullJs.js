@@ -1251,6 +1251,33 @@ function getStudyList(chapterID)
 		["velo","velare, velavi, velatum: veil, cover, conceal"]
 	];
 
+	let greekLetters = [
+		["&Alpha", "α","a: alpha"],
+		["&Beta, β","b: beta"],
+		["&Gamma, ψ","c: "],
+		["&Delta, δ","d: delta"],
+		["&Epsilon, ε","e: epsilon"],
+		["&Zeta, φ",": phi"],
+		["&Gamma, γ","g: gamma"],
+		["&, η","h: "],
+		["Ι, ι",": iota"],
+		["Ξ, ξ",""],
+		["Κ, κ","k: kappa"],
+		["Λ, λ","l: lambda"],
+		["Μ, μ","m: mu"],
+		["Ν, ν","n: nu"],
+		["Ο, ο","o: omicron"],
+		["Π, π","p: pi"],
+		["Ρ, ρ","r: rho"],
+		["Σ, σ","s: sigma"],
+		["Τ, τ","t: tau"],
+		["Θ, θ",""],
+		["Ω, ω",""],
+		["Χ, χ","x: chi"],
+		["Υ, υ",""],
+		["Ζ, ζ",""]
+	];
+
 	let chapters = [
 	    [bk4ch25, "De Bello Gallico Book 4 Chapter 25"],
 	    [bk4ch25SansMacrons, "De Bello Gallico Book 4 Chapter 25: No Macrons"],
@@ -1271,7 +1298,8 @@ function getStudyList(chapterID)
 	    [metamorphosesbk1Ln367To74sansMacrons, "Metamorphōsēs Book 1 Lines 367-374: No Macrons"],
 	    [metamorphosesbk1Ln367To74, "Metamorphōsēs Book 1 Lines 367-374"],
 	    [metamorphosesbk1Ln375To97sansMacrons, "Metamorphōsēs Book 1 Lines 375-397: No Macrons"],
-	    [metamorphosesbk1Ln375To97, "Metamorphōsēs Book 1 Lines 375-397"]
+	    [metamorphosesbk1Ln375To97, "Metamorphōsēs Book 1 Lines 375-397"],
+	    [greekLetters, "Greek Letters"]
 	];
 
 	if (chapterID == null)
